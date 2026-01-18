@@ -1,0 +1,11 @@
+Model Information:
+* title:	Japanese Traditional Room
+* source:	https://sketchfab.com/3d-models/japanese-traditional-room-69175f3d695d4950b0cae35ecd3294df
+* author:	jrevel (https://sketchfab.com/jrevel)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Japanese Traditional Room" (https://sketchfab.com/3d-models/japanese-traditional-room-69175f3d695d4950b0cae35ecd3294df) by jrevel (https://sketchfab.com/jrevel) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

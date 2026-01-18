@@ -1,0 +1,8 @@
+Model Information:
+* title:	SONY Walkman WMD-DT1 (Evangelion Ver.)
+* source:	https://sketchfab.com/3d-models/sony-walkman-wmd-dt1-evangelion-ver-9051b4d387964cdbbf7d1df9af79b50e
+* author:	융해열흡수 (https://sketchfab.com/heat_of_fusion)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

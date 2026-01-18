@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://gkbh0q3mjrlx"]
+
+[ext_resource type="PackedScene" uid="uid://67ueouoyah2c" path="res://scenes/japanese_lamp/scene.gltf" id="1_r57si"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_r57si")]

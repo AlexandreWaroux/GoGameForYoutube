@@ -1,0 +1,150 @@
+[gd_scene load_steps=13 format=3 uid="uid://c61pdodv2a602"]
+
+[ext_resource type="Script" uid="uid://cv7l33opm6gr8" path="res://scripts/go_game.gd" id="1_g1di5"]
+[ext_resource type="PackedScene" uid="uid://lhdijko73j48" path="res://scenes/goBoardglb.glb" id="2_w6kd3"]
+[ext_resource type="Script" uid="uid://d0wyyt2jkpqum" path="res://scripts/pierres.gd" id="3_a0nok"]
+[ext_resource type="PackedScene" uid="uid://67ueouoyah2c" path="res://scenes/japanese_lamp/scene.gltf" id="3_et4ro"]
+[ext_resource type="PackedScene" uid="uid://b05vxi63a8ut" path="res://scenes/scene.tscn" id="4_w6kd3"]
+[ext_resource type="Texture2D" uid="uid://c8c0a8rj5805w" path="res://images/upscalemedia-transformed(1).jpeg" id="5_a0nok"]
+[ext_resource type="PackedScene" uid="uid://cbbnns32dcl3n" path="res://scenes/sony_walkman_wmd-dt1_evangelion_ver/scene.gltf" id="7_vrvaj"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a0nok"]
+sky_top_color = Color(0.740071, 0.227839, 0.849135, 1)
+sky_horizon_color = Color(0.887692, 0.575449, 0.224942, 1)
+sky_curve = 0.261165
+sun_angle_max = 49.09
+sun_curve = 0.289781
+
+[sub_resource type="Sky" id="Sky_f4kqw"]
+sky_material = SubResource("ProceduralSkyMaterial_a0nok")
+process_mode = 1
+
+[sub_resource type="Environment" id="Environment_f4kqw"]
+background_mode = 2
+sky = SubResource("Sky_f4kqw")
+ambient_light_source = 3
+ssr_fade_in = 2.48464
+ssr_fade_out = 12.5533
+ssr_depth_tolerance = 78.01
+ssao_radius = 3.35
+ssao_intensity = 14.31
+sdfgi_energy = 0.5
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 4.43
+glow_strength = 0.6
+glow_bloom = 0.4
+glow_blend_mode = 1
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.008
+volumetric_fog_albedo = Color(0.481336, 9.3855e-07, 0.287996, 1)
+volumetric_fog_emission = Color(0.307525, 0.0897194, 2.40654e-08, 1)
+volumetric_fog_detail_spread = 5.4075
+volumetric_fog_ambient_inject = 0.03
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ujga3"]
+size = Vector2(20, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kqn8t"]
+size = Vector3(0.503189, 0.0173264, 0.50029)
+
+[node name="japanGoGame" type="Node3D"]
+script = ExtResource("1_g1di5")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_f4kqw")
+
+[node name="CameraRig" type="Node3D" parent="."]
+
+[node name="Camera" type="Camera3D" parent="CameraRig"]
+transform = Transform3D(0.999808, 0.0102588, -0.0167369, -0.00603211, 0.971879, 0.235397, 0.0186823, -0.235252, 0.971755, 0.256377, 9.09286, 10.1717)
+current = true
+fov = 57.5
+
+[node name="Top" type="Camera3D" parent="CameraRig"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 25.0746, -5.86646e-07)
+current = true
+fov = 40.0
+
+[node name="Light" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Light"]
+transform = Transform3D(0.983346, 0.040328, 0.177209, -0.0627238, 0.990465, 0.122659, -0.170574, -0.131731, 0.9765, 0, 9.921, 0)
+light_color = Color(1, 0.668974, 0.517254, 1)
+light_energy = 1.828
+light_angular_distance = 0.5
+light_bake_mode = 1
+shadow_enabled = true
+shadow_blur = 0.9
+directional_shadow_blend_splits = true
+directional_shadow_fade_start = 1.0
+directional_shadow_max_distance = 160.0
+directional_shadow_pancake_size = 0.5
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Light"]
+transform = Transform3D(1, 0, 0, 0, 1.19249e-08, 1, 0, -1, 1.19249e-08, 0, 18.9752, 9.68388e-08)
+light_color = Color(0.98953, 0.779707, 0.691646, 1)
+light_energy = 13.0
+shadow_enabled = true
+spot_range = 21.044
+spot_attenuation = 0.6
+spot_angle = 51.03
+
+[node name="Background" type="Sprite3D" parent="."]
+transform = Transform3D(2.49985, 0, -0.0272266, 0, 2.5, 0, 0.0272266, 0, 2.49985, 9.29568, 58.0165, 71.5132)
+texture = ExtResource("5_a0nok")
+
+[node name="Objects" type="Node3D" parent="."]
+
+[node name="Lamp" parent="Objects" instance=ExtResource("3_et4ro")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 57.6546, -0.0419437, -32.3683)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Objects/Lamp"]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.0329494, 0.0325116, -0.0516838)
+light_color = Color(0.899824, 0.359844, 0, 1)
+light_energy = 9.632
+shadow_enabled = true
+shadow_blur = 4.113
+omni_range = 71.995
+omni_attenuation = 0.311
+
+[node name="Dojo" parent="Objects" instance=ExtResource("4_w6kd3")]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 0, 11.4875)
+
+[node name="PlateauModele" parent="Objects" instance=ExtResource("2_w6kd3")]
+transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 0, 0, 0)
+
+[node name="Plateau" type="MeshInstance3D" parent="Objects/PlateauModele"]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 0.26508, 0)
+mesh = SubResource("PlaneMesh_ujga3")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Objects/PlateauModele"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Objects/PlateauModele/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.263222, 0)
+shape = SubResource("BoxShape3D_kqn8t")
+
+[node name="Pierres" type="Node3D" parent="Objects"]
+transform = Transform3D(-0.26, 0, 0, 0, -0.26, 0, 0, 0, -0.26, 0, 6.768, 0)
+script = ExtResource("3_a0nok")
+
+[node name="Walkman" parent="Objects" instance=ExtResource("7_vrvaj")]
+transform = Transform3D(2.49985, 0, -0.0272266, 0, 2.5, 0, 0.0272266, 0, 2.49985, 9.29568, 67.5606, 71.5132)
+
+[node name="Lamp2" parent="Objects" instance=ExtResource("3_et4ro")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -60.0766, -0.0419437, -32.3683)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Objects/Lamp2"]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.0329494, 0.0325116, -0.0516838)
+light_color = Color(0.899824, 0.359844, 0, 1)
+light_energy = 7.217
+shadow_enabled = true
+shadow_blur = 4.113
+omni_range = 71.995
+omni_attenuation = 0.294
+
+[node name="Sketchfab_Scene" parent="Objects" instance=ExtResource("7_vrvaj")]
+transform = Transform3D(1.22061, 0, 0.63303, 0, 1.375, 0, -0.63303, 0, 1.22061, 10.3719, -0.066182, 3.0557)

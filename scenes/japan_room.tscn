@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjhrtqcbtll87"]
+
+[ext_resource type="PackedScene" uid="uid://cedmast2clpa8" path="res://scenes/japanese_traditional_room/scene.gltf" id="1_2unll"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_2unll")]
+
+[node name="master_roof4" parent="Sketchfab_model/a8f85f1eda6c40b081eaecd6dd2b4119_fbx/Object_2/RootNode/roof" index="3"]
+transform = Transform3D(-1, 1.22465e-16, -1.01064e-15, 1.22465e-16, 1, 1.22465e-16, 1.01064e-15, 1.22465e-16, -1, 6, 0, 225)
