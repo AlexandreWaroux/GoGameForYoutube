@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c61pdodv2a602"]
+[gd_scene load_steps=16 format=3 uid="uid://c61pdodv2a602"]
 
 [ext_resource type="Script" uid="uid://cv7l33opm6gr8" path="res://scripts/go_game.gd" id="1_g1di5"]
 [ext_resource type="PackedScene" uid="uid://lhdijko73j48" path="res://scenes/goBoardglb.glb" id="2_w6kd3"]
@@ -42,6 +42,151 @@ volumetric_fog_emission = Color(0.307525, 0.0897194, 2.40654e-08, 1)
 volumetric_fog_detail_spread = 5.4075
 volumetric_fog_ambient_inject = 0.03
 
+[sub_resource type="Animation" id="Animation_vrvaj"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.256377, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(9.09286, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(10.1717, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:rotation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.237629, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:rotation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.0172227, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:rotation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.00620656, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_et4ro"]
+resource_name = "traveling"
+length = 20.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 2),
+"points": PackedFloat32Array(0, 0, 0, 6.12381, 0, 0, -6.12381, 0, 0, 0),
+"times": PackedFloat32Array(0, 18.3714)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(2, 2),
+"points": PackedFloat32Array(4.92602, 0, 0, 6.12381, 0, 8.70327, -6.12381, 0, 0, 0),
+"times": PackedFloat32Array(0, 18.3714)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(2, 2),
+"points": PackedFloat32Array(-33.602, 0, 0, 6.12381, 0, -13.1293, -6.12381, 0, 0, 0),
+"times": PackedFloat32Array(0, 18.3714)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:rotation:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(2, 2),
+"points": PackedFloat32Array(-0.0239983, 0, 0, 6.12381, 0, -0.012514, -6.12381, 0, 0, 0),
+"times": PackedFloat32Array(0, 18.3714)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:rotation:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(2, 2),
+"points": PackedFloat32Array(-3.14159, 0, 0, 6.12381, 0, -3.14159, -6.12381, 0, 0, 0),
+"times": PackedFloat32Array(0, 18.3714)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:rotation:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(2, 2),
+"points": PackedFloat32Array(-2.0984e-09, 0, 0, 6.12381, 0, -3.64226e-10, -6.12381, 0, 0, 0),
+"times": PackedFloat32Array(0, 18.3714)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sj5f0"]
+_data = {
+&"RESET": SubResource("Animation_vrvaj"),
+&"traveling": SubResource("Animation_et4ro")
+}
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_ujga3"]
 size = Vector2(20, 20)
 
@@ -50,6 +195,7 @@ size = Vector3(0.503189, 0.0173264, 0.50029)
 
 [node name="japanGoGame" type="Node3D"]
 script = ExtResource("1_g1di5")
+metadata/movie_file = "res://cinematics/plan.avi"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_f4kqw")
@@ -57,9 +203,14 @@ environment = SubResource("Environment_f4kqw")
 [node name="CameraRig" type="Node3D" parent="."]
 
 [node name="Camera" type="Camera3D" parent="CameraRig"]
-transform = Transform3D(0.999808, 0.0102588, -0.0167369, -0.00603211, 0.971879, 0.235397, 0.0186823, -0.235252, 0.971755, 0.256377, 9.09286, 10.1717)
-current = true
+transform = Transform3D(0.999807, 0.010259523, -0.0167379, -0.006032108, 0.9718799, 0.23539901, 0.018682303, -0.23525253, 0.9717551, 0.256377, 9.09286, 10.1717)
 fov = 57.5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CameraRig/Camera"]
+libraries = {
+&"": SubResource("AnimationLibrary_sj5f0")
+}
+autoplay = "traveling"
 
 [node name="Top" type="Camera3D" parent="CameraRig"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 25.0746, -5.86646e-07)
